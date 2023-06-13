@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --transparent: rgba(255, 255, 255, 0);
+}
+
+.page-background {
+  background: radial-gradient(
+    ellipse 80% 50% at 50% -20%,
+    rgba(120, 119, 198, 0.3),
+    var(--transparent)
+  );
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  min-height: 100vh;
+  @apply bg-slate-950;
+  @apply text-slate-50;
+}
