@@ -7,6 +7,7 @@ const basePath = isProduction ? `/${package.name}` : '';
 const nextConfig = {
   reactStrictMode: true,
   basePath,
+  output: 'export',
   env: {
     PUBLIC_PATH: basePath,
   },
