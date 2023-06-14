@@ -1,16 +1,22 @@
 import clsx from 'clsx';
+import Link from 'next/link';
 
 const HEADER_HEIGHT = 'h-[48px]';
 
 function NavItem({ href, children }) {
+  const base = 'flex items-center transition text-white hover:text-slate-500';
+
+  // Handle relative links with next/link, Next.js `basePath` will be added
+  if (href && href[0] === '/') {
+    return (
+      <Link href={href} className={clsx(base, HEADER_HEIGHT)}>
+        {children}
+      </Link>
+    );
+  }
+
   return (
-    <a
-      href={href}
-      className={clsx(
-        'flex items-center transition text-white hover:text-slate-500',
-        HEADER_HEIGHT
-      )}
-    >
+    <a href={href} className={clsx(base, HEADER_HEIGHT)}>
       {children}
     </a>
   );
