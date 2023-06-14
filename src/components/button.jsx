@@ -1,11 +1,11 @@
 import clsx from 'clsx';
 
 export default function Button({ kind = 'default', className, href, children, ...extra } = {}) {
-  const base = 'rounded-full flex items-center gap-[8px]';
+  const base = 'rounded-full flex items-center gap-[8px] transition-all';
 
   const styles = {
     primary:
-      'px-6 py-2 bg-gradient-to-r from-pink-500 to-violet-600 text-xl hover:shadow-[0_1px_40px] hover:shadow-violet-500/[0.5]',
+      'px-6 py-2 bg-gradient-to-r from-sky-400 to-emerald-600 text-xl hover:shadow-[0_1px_40px] hover:shadow-emerald-500/[0.5]',
     default: 'px-4 py-1 bg-white/[0.1] hover:bg-white/[0.2] border border-white/[0.05]',
   };
 
