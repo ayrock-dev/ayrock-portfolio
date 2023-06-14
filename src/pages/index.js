@@ -51,7 +51,7 @@ export default function Home() {
           <p className="mb-[48px] text-lg font-normal">
             Building web applications with scalable, front-end architecture.
           </p>
-          <div className="grid w-full grid-flow-row grid-cols-4 grid-rows-2 gap-4">
+          <div className="grid w-full grid-flow-row grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4">
             {Array.from({ length: 6 }).map((_, index) => (
               <div key={index} className="h-16 rounded-lg bg-white p-4" />
             ))}
